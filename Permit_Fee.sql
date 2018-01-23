@@ -29,6 +29,7 @@ Ver        Date        Author           Description
                                           rules for permit fees.
 3.1        26/08/2015  Ammar Al-Issa    OSR0024758 -  Change tent fee calculations
 3.2        05/12/2016  Jeremy Wong      Added code for TPFP permit fee calculations
+3.3        16/01/2018  Gavin Liu        TASK0115320 - Change code tent fee calculations
 
 NOTES:
 ******************************************************************************/
@@ -80,11 +81,11 @@ begin
     then
         N_count := toolkit.FOLDERINFO_NUMERIC(parmFolderRSN, 2266, NULL);
 
--- 3.1        26/08/2015  Ammar Al-Issa    OSR0024758******************* Start
--- Will read the minimum Permit rate
---        n_rate := Amanda.pkc_surrey.get_rate_with_date( 2008,52,sysdate);  -- Commented in Version 3.1
-          n_rate := Amanda.pkc_surrey.get_rate_with_date( 2002,0,sysdate);
--- 3.1        26/08/2015  Ammar Al-Issa    OSR0024758******************* End
+-- 3.3   TASK0115320 19/001/2018  Gavin Liu    TASK0115320******************* Start
+-- Will read current tent rate
+        n_rate := Amanda.pkc_surrey.get_rate_with_date( 2008,52,sysdate);  
+-- 3.3          n_rate := Amanda.pkc_surrey.get_rate_with_date( 2002,0,sysdate);  -- Commented in Version 3.3
+-- 3.1        26/08/2015  Ammar Al-Issa    TASK0115320******************* End
 
         permit_fee := n_count * n_rate;
 
