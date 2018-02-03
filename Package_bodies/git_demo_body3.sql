@@ -8,9 +8,14 @@ create or replace PACKAGE BODY        GIT_DEMO3 AS
   END f1;
 
   Function f2(rate float)
-  RETURN float AS
+  --V1.1 new logic
+  RETURN number AS
   BEGIN
-    -- TODO: Initial checkin
-    RETURN NULL;
+    -- Do something
+    SELECT statuscode into v_statuscode
+    from folder
+    where folderrsn = 1;
+    
+    RETURN v_statuscode;
   END f2;
 END GIT_DEMO3;
