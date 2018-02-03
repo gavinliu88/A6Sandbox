@@ -13,12 +13,17 @@ create or replace PACKAGE BODY        GIT_DEMO3 AS
 
   Function f2(rate float)
   --V1.1 new logic
-  --V1.2 new logic
+  --V1.2 new features
+  --V1.3 new logic
   RETURN number AS
   v_statuscode number;
   BEGIN
     -- Do something
-    SELECT statuscode into v_statuscode
+    SELECT processrsn into v_statuscode
+    from folderprocess
+    where folderrsn = 11;
+  
+      SELECT statuscode into v_statuscode
     from process
     where processrsn = 1;
     
