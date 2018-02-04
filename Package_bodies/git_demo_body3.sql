@@ -32,8 +32,10 @@ create or replace PACKAGE BODY        GIT_DEMO3 AS
     from folderprocess
     where folderrsn = 11;
   
-      SELECT statuscode into v_statuscode
-    from process
+      SELECT statuscode,statusdesc into v_statuscode,v_statusdesc
+    from process p
+    inner join validprocess vp
+    on p.processcode = vp.processcode
     where processrsn = 1;
     
     select statusdesc 
