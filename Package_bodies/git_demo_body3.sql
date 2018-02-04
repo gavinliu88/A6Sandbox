@@ -17,6 +17,8 @@ create or replace PACKAGE BODY        GIT_DEMO3 AS
   --V1.3 new logic
   RETURN number AS
   v_statuscode number;
+  v_statusdesc varchar2(100);
+  
   BEGIN
     -- Do something
     SELECT processrsn into v_statuscode
@@ -26,6 +28,10 @@ create or replace PACKAGE BODY        GIT_DEMO3 AS
       SELECT statuscode into v_statuscode
     from process
     where processrsn = 1;
+    
+    select statusdesc 
+    from validprocess
+    where processcode =1000;
     
     RETURN v_statuscode;
   END f2;
