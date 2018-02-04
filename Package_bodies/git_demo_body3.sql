@@ -1,12 +1,17 @@
 create or replace PACKAGE BODY        GIT_DEMO3 AS
 --V1.1 add comment
-  Function f1(rate float)
-  RETURN float AS
+  Function f1(rate Number)
+  RETURN Number AS
+  v_fee number;
   BEGIN
     -- add very long logic section
     -- long
     -- long
     -- logic section
+    select lookupfee
+    from vlookup
+    where lookupcode=2007
+    and lookup1 = 24;
     
     RETURN 6;
   END f1;
