@@ -4,10 +4,7 @@ create or replace PACKAGE BODY        GIT_DEMO3 AS
   RETURN Number AS
   v_fee number;
   BEGIN
-    -- add very long logic section
-    -- long
-    -- long
-    -- logic section
+
     select lookupfee
     from vlookup
     where lookupcode=2007
