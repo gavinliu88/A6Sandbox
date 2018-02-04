@@ -13,7 +13,8 @@ create or replace PACKAGE BODY        GIT_DEMO3 AS
     where lookupcode=2007
     and lookup1 = 24;
     
-    RETURN 6;
+    
+    RETURN v_fee;
   END f1;
 
   Function f2(rate float)
