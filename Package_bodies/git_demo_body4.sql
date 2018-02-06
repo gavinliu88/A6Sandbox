@@ -11,10 +11,7 @@ create or replace PACKAGE BODY                      GIT_DEMO4 AS
   RETURN Number AS
   v_fee number;
   BEGIN
-    -- add very long logic section
-    -- long
-    -- long
-    -- logic section
+
     select lookupfee into v_fee
     from validlookup
     where lookupcode=2007
@@ -24,4 +21,13 @@ create or replace PACKAGE BODY                      GIT_DEMO4 AS
 
     RETURN v_fee;
   END f2;
+  
+  Function f3(folderrsn Number)
+  RETURN Number AS
+  v_rate number;
+  BEGIN
+
+    v_rate := 6;
+    RETURN v_rate;
+  END f3;
 END GIT_DEMO4;
