@@ -21,8 +21,7 @@ create or replace PACKAGE BODY                      GIT_DEMO4 AS
     and lookup1 = 24
     and rownum = 1;
 
-    -- add 2 lines
-    --
+
     RETURN v_fee;
   END f2;
 END GIT_DEMO4;
