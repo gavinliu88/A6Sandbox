@@ -21,6 +21,8 @@ create or replace PACKAGE BODY        GIT_DEMO8 AS
   BEGIN
   --Gavin add comments
   --Gavin add comments
+    --github line1
+    --github line2
     select lookupfee into v_fee
     from validlookup
     where lookupcode=2007
