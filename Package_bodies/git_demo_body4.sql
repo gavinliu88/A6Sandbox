@@ -4,7 +4,8 @@ create or replace PACKAGE BODY                             GIT_DEMO4 AS
   RETURN Number AS
   v_statuscode folder.statuscode%TYPE;
   BEGIN
-    -- TODO: Initial checkin
+    -- Gavin's change line1
+    --Gavin's change line2
     SELECT STATUSCODE INTO v_statuscode
     FROM FOLDER
     WHERE FOLDERRSN = 123;
