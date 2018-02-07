@@ -22,4 +22,12 @@ create or replace PACKAGE BODY        GIT_DEMO8 AS
     RETURN v_fee;
   END f2;
   
+  Function f3(folderrsn Number)
+  RETURN Number AS
+  v_rate number;
+  BEGIN
+
+    v_rate := 6;
+    RETURN v_rate;
+  END f3;  
 END GIT_DEMO8;
