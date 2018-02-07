@@ -10,9 +10,16 @@ create or replace PACKAGE BODY        GIT_DEMO8 AS
 
   Function f2(rate Number)
   RETURN Number AS
+  v_fee number;
   BEGIN
-    -- TODO: Initial checkin
-    RETURN NULL;
+    select lookupfee into v_fee
+    from validlookup
+    where lookupcode=2007
+    and lookup1 = 24
+    and rownum = 1;
+
+
+    RETURN v_fee;
   END f2;
   
 END GIT_DEMO8;
