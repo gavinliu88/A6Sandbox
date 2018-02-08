@@ -5,6 +5,7 @@ create or replace PACKAGE BODY        GIT_DEMO5 AS
     v_statuscode folder.statuscode%TYPE;
   BEGIN
    ---dev
+   --feature from uat
     SELECT STATUSCODE INTO v_statuscode
     FROM FOLDER
     WHERE FOLDERRSN = 123;
