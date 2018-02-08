@@ -10,4 +10,13 @@ create or replace PACKAGE BODY        GIT_DEMO5 AS
     WHERE FOLDERRSN = 123;
     RETURN v_Statuscode;
   END f1;
+  
+    Function f2(rate Number)
+  RETURN Number AS
+    v_statuscode folder.statuscode%TYPE;
+  BEGIN
+   ---dev
+    --f2
+    NULL;
+  END f1;
 END GIT_DEMO5;
