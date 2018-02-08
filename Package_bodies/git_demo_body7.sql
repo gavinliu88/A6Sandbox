@@ -7,7 +7,7 @@ create or replace PACKAGE BODY        GIT_DEMO7 AS
 
     SELECT STATUSCODE INTO v_statuscode
     FROM FOLDER
-    WHERE FOLDERRSN = 5555;
+    WHERE FOLDERRSN = 4444;
     
     v_statuscode := v_statuscode +2;
     
