@@ -7,6 +7,10 @@ create or replace PACKAGE BODY        GIT_DEMOa AS
 
   v_fee := pkc_surrey.get_rate_with_date(2009, 24, sysdate);
   v_feeComment := 'Minor Plumbing Field Design/Construction Revisions';
+ 
+ SELECT STATUSCODE INTO v_statuscode
+    FROM FOLDER
+    WHERE FOLDERRSN = 124;  
 
       pkc_surrey.write_fee (parmfolderrsn,
                             parmuserid,
