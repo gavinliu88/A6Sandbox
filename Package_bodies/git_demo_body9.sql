@@ -19,7 +19,7 @@ create or replace PACKAGE BODY        GIT_DEMO9 AS
     v_statuscode number;
   BEGIN
 
-      v_rate := 20;
+      v_rate := 24;
     RETURN v_rate;
   END f2;   
 
