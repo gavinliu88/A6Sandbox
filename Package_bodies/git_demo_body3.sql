@@ -9,9 +9,10 @@ create or replace PACKAGE BODY        GIT_DEMO3 AS
     -- long, gavin
     -- logic section
     select lookupfee
-    from vlookup
+    from validlookup
     where lookupcode=2007
-    and lookup1 = 24;
+    and lookup1 = 24
+    and rownum = 1;
     
     -- add 2 lines
     --

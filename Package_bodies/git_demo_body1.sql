@@ -1,7 +1,7 @@
 create or replace PACKAGE BODY        GIT_DEMO1 AS
 
-  Function f1(rate float)
-  RETURN float AS
+  Function f1(rate number)
+  RETURN number AS
   BEGIN
     -- TODO: Initial checkin
     RETURN NULL;
