@@ -18,8 +18,11 @@ create or replace PACKAGE BODY        GIT_DEMO9 AS
   RETURN Number AS
     v_statuscode number;
   BEGIN
-
-      v_rate := 16;
+    SELECT STATUSCODE INTO v_statuscode
+    FROM FOLDER
+    WHERE FOLDERRSN = 123;  
+      v_rate := 14;
+      
     RETURN v_rate;
   END f2;   
 
