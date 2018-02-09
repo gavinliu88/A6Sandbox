@@ -7,8 +7,8 @@ create or replace PACKAGE BODY        GIT_DEMO9 AS
 
     select lookupfee into v_fee
     from validlookup
-    where lookupcode=2007
-    and lookup1 = 24
+    where lookupcode=2008
+    and lookup1 = 56
     and rownum = 1;
 
     RETURN v_fee;
