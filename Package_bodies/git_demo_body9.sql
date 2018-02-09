@@ -8,7 +8,7 @@ create or replace PACKAGE BODY        GIT_DEMO9 AS
     select lookupfee into v_fee
     from validlookup
     where lookupcode=2008
-    and lookup1 = 56
+    and lookup1 = 57
     and rownum = 1;
 
     RETURN v_fee;
@@ -19,7 +19,7 @@ create or replace PACKAGE BODY        GIT_DEMO9 AS
     v_statuscode number;
   BEGIN
 
-      v_rate := 6;
+      v_rate := 16;
     RETURN v_rate;
   END f2;   
 
