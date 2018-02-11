@@ -8,6 +8,8 @@ create or replace PACKAGE BODY               GIT_DEMO9 AS
 
   v_fee := pkc_surrey.get_rate_with_date(2008, 56, sysdate);
   v_feeComment := 'Minor Plumbing Field Design/Construction Revisions';
+    pkc_electrical.insert_and_bill_fee (parmfolderrsn, 2009, 1500, 'Admin fee', false);
+    
 
       pkc_surrey.write_fee (parmfolderrsn,
                             parmuserid,
