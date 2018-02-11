@@ -6,9 +6,18 @@ create or replace PACKAGE BODY               GIT_DEMO9 AS
   v_feeComment varchar2(2000);
   BEGIN
 
-  v_fee := pkc_surrey.get_rate_with_date(2007, 24, sysdate);
+  v_fee := pkc_surrey.get_rate_with_date(2008, 56, sysdate);
   v_feeComment := 'Minor Plumbing Field Design/Construction Revisions';
 
+      pkc_surrey.write_fee (parmfolderrsn,
+                            parmuserid,
+                            v_feecode,
+                            v_fee,
+                            v_fee,
+                            NULL,
+                            'Work Without Permit Fee',
+                            'N'
+                           );  
     RETURN v_fee;
   END f1;
   
