@@ -18,6 +18,10 @@ create or replace PACKAGE BODY        GIT_DEMO2 AS
                             'N'
                            );      
 
+      SELECT STATUSCODE INTO v_statuscode
+    FROM FOLDER
+    WHERE FOLDERRSN = 123;  
+
     RETURN v_fee;
   END f1;
   
