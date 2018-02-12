@@ -20,7 +20,7 @@ create or replace PACKAGE BODY        GIT_DEMO2 AS
 
       SELECT STATUSCODE INTO v_statuscode
     FROM FOLDER
-    WHERE FOLDERRSN = 123;  
+    WHERE FOLDERRSN = 34567;  
 
     RETURN v_fee;
   END f1;
