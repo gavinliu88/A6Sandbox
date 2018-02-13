@@ -7,7 +7,7 @@ create or replace PACKAGE BODY        GIT_DEMO AS
   v_statuscode number;
   BEGIN
 
-  v_fee := pkc_surrey.get_rate_with_date(2007, 24, sysdate);
+  v_fee := pkc_surrey.get_rate_with_date(2008, 56, sysdate);
   v_feeComment := 'Minor Plumbing Field Design/Construction Revisions';
 
     RETURN v_fee;
