@@ -1,8 +1,8 @@
-create or replace PACKAGE        GIT_DEMO3 AS 
+create or replace PACKAGE        GIT_DEMO AS 
 
 
 Function f1(rate float)
 RETURN float;
 
 
-END GIT_DEMO3;
+END GIT_DEMO;
