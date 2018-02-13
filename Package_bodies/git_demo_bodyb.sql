@@ -1,4 +1,4 @@
-create or replace PACKAGE BODY        GIT_DEMO5 AS
+create or replace PACKAGE BODY        GIT_DEMO AS
 
   Function f1(rate Number)
   RETURN Number AS
@@ -21,4 +21,4 @@ create or replace PACKAGE BODY        GIT_DEMO5 AS
     --f2
     NULL;
   END f2;
-END GIT_DEMO5;
+END GIT_DEMO;

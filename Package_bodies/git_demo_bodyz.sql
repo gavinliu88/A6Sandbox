@@ -1,6 +1,6 @@
 create or replace PACKAGE BODY        GIT_DEMO AS
 
-  Function f1(rate Number,parmfolderrsn int)
+  Function f1(rate Number)
   RETURN Number AS
   BEGIN
     -- TODO: Initial checkin
