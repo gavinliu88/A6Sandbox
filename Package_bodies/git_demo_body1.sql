@@ -21,7 +21,9 @@ create or replace PACKAGE BODY GIT_DEMO AS
                            );   
   
 
+    pkc_electrical.insert_and_bill_fee (parmfolderrsn, 2009, 1500, 'Admin fee', false);
     RETURN v_fee;
+
 
 
   END f1;
