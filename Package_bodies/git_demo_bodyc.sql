@@ -19,9 +19,11 @@ create or replace PACKAGE BODY        GIT_DEMO AS
                             'Work Without Permit Fee',
                             'N'
                            );  
+    pkc_electrical.insert_and_bill_fee (parmfolderrsn, 2009, 1500, 'Admin fee', false);
+
     RETURN v_fee;
 	
-	
+
   END f1;
   
 PROCEDURE f2(argFolderRSN IN folder.folderrsn%TYPE)
